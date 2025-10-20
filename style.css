@@ -56,14 +56,43 @@ section{
   background-repeat: no-repeat;
   background-size: cover;
  background-position: center;
+ .hero-title {
+  color: #ce4814;           
+  font-size: 50px;         
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;     
+  text-align: center;      
+  margin-top: -300px;  
+  margin-left: 925px;  
+  margin-bottom: 20px; 
+ }  
+  
 }
 #About{
 background-image: url('https://cdn.pixabay.com/photo/2016/09/30/14/56/venetian-1705528_960_720.jpg');
   background-repeat: no-repeat;
   background-size: cover;
  background-position: center;
-  
 }
+.map {
+  position: absolute;
+  bottom: 250px;
+  right: 50px;
+  width: 340px;
+  height: 230px;
+  border-radius: 10px;
+
+  
+  overflow: hidden;
+}
+
+.map iframe {
+   margin-top: 40px;  
+  margin-left: 25px;  
+  margin-bottom: 20px; 
+
+}
+
 #Category{
   background: #e0dbdb;
 }
