@@ -118,8 +118,8 @@ section{
 
 .hero-features {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 0px;
+  left: 0%;
   width: 100%;
   background: #f7f4ef;
   display: flex;
@@ -132,33 +132,93 @@ section{
   border-top-right-radius: 10px;
 }
 
-.feature {
+/*Home accessory "History"*/
+.feature1  {
   text-align: center;
   color: #333;
   max-width: 600px;
 }
 
-.feature i {
+.feature1 i {
   font-size: 40px;
   color: #ce4814;
-  margin-bottom:  -40px;
+  display: inline-block;
+  transform: translateY(-60px);
 }
 
-.feature h3 {
+.feature1 h3 {
   font-size: 1.3rem;
   color: #2b2b2b;
   margin-bottom: -50px;
   font-weight: 600;
 }
 
-.feature p {
+.feature1 p {
   font-size: 0.9rem;
   color: #555;
   line-height: 0.3;
 }
 
 
-@media (max-width: 768px) {
+
+/*Home accessory "Cuisine"*/
+.feature2 {
+  text-align: center;
+  color: #cb93f9;
+  max-width: 1000px;
+}
+
+.feature2 i {
+  font-size: 40px;
+  color: #cb0b0b;
+  display: inline-block;
+  transform: translateY(-40px);
+}
+
+.feature2 h3 {
+  font-size: 1.3rem;
+  color: #2b2b2b;
+  margin-bottom: -50px;
+  font-weight: 600;
+}
+
+.feature2 p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 0.3;
+}
+
+
+
+/*Home accessory "Coastlines"*/
+.feature3 {
+  text-align: center;
+  color: #333;
+  max-width: 600px;
+}
+
+.feature3 i {
+  font-size: 60px;
+  color: #ce4814;
+  display: inline-block;
+  transform: translateY(-40px);
+}
+
+.feature3 h3 {
+  font-size: 1.3rem;
+  color: #2b2b2b;
+  margin-bottom: -50px;
+  font-weight: 600;
+}
+
+.feature3 p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 0.3;
+}
+
+
+@media (max-width: 1000px) {
   .hero-title {
     font-size: 2.4rem;
   }
@@ -171,7 +231,7 @@ section{
   }
   .hero-features {
     flex-direction: column;
-    gap: 40px;
+    gap: 400px;
   }
 }
 #About{
@@ -299,6 +359,7 @@ background-image: url('https://cdn.pixabay.com/photo/2016/09/30/14/56/venetian-1
   font-size: 0.95rem;
   line-height: 1.5;
 }
+
 
 
 @media (max-width: 1000px) {
