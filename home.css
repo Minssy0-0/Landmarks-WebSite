@@ -1,0 +1,181 @@
+#Home {
+  background: url('https://cdn.pixabay.com/photo/2023/09/21/14/17/italy-8266783_1280.jpg')
+    no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: #d66f0e;
+  padding-top: 130px;
+  margin-bottom: 0px;
+  
+}
+
+#Home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+/* Hero content container */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  margin-bottom: -100px;
+}
+/*Ready to explore title*/
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 100px;
+}
+/*explore the beauty of Italy subtitle*/
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 300px;
+   position: relative;
+  z-index: 1;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: #ce4814;
+  color: #fff;
+  padding: 10px 34px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #e65c1b;
+}
+
+
+.hero-features {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  background: #f7f4ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 60px;
+  flex-wrap: wrap;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/*Home accessory "History"*/
+.feature1  {
+  text-align: center;
+  color: #333;
+  max-width: 600px;
+}
+
+.feature1 i {
+  font-size: 40px;
+  color: #ce4814;
+  display: inline-block;
+  transform: translateY(-60px);
+}
+
+.feature1 h3 {
+  font-size: 1.3rem;
+  color: #2b2b2b;
+  margin-bottom: -50px;
+  font-weight: 600;
+}
+
+.feature1 p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 0.3;
+}
+
+
+
+/*Home accessory "Cuisine"*/
+.feature2 {
+  text-align: center;
+  color: #cb93f9;
+  max-width: 1000px;
+}
+
+.feature2 i {
+  font-size: 40px;
+  color: #cb0b0b;
+  display: inline-block;
+  transform: translateY(-40px);
+}
+
+.feature2 h3 {
+  font-size: 1.3rem;
+  color: #2b2b2b;
+  margin-bottom: -50px;
+  font-weight: 600;
+}
+
+.feature2 p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 0.3;
+}
+
+
+
+/*Home accessory "Coastlines"*/
+.feature3 {
+  text-align: center;
+  color: #333;
+  max-width: 600px;
+}
+
+.feature3 i {
+  font-size: 60px;
+  color: #ce4814;
+  display: inline-block;
+  transform: translateY(-40px);
+}
+
+.feature3 h3 {
+  font-size: 1.3rem;
+  color: #2b2b2b;
+  margin-bottom: -50px;
+  font-weight: 600;
+}
+
+.feature3 p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 0.3;
+}
+
+
+@media (max-width: 1000px) {
+  .hero-title {
+    font-size: 2.4rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .hero-btn {
+    font-size: 1rem;
+    padding: 10px 24px;
+  }
+  .hero-features {
+    flex-direction: column;
+    gap: 400px;
+  }
+}
