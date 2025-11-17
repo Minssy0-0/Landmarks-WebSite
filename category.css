@@ -54,13 +54,16 @@
 /*"Choose Your Destination" Title Styling*/
 .category-title {
   font-size: 2rem;
-  color: #fff;
-  text-align: left;
-  font-weight: 700;
-  padding-bottom: 600px;
-  margin-right: -750px;
+  text-align: center;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+  margin-top: -550px;
+}
 
+.category-title h2{
+text-align: left;
+justify-content: right;
+display: flex;
+align-items: center;
 }
 
 
@@ -68,9 +71,9 @@
 .category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 50px;
+  gap: 30px;
   max-width: 1250px;
-  margin-left: 250px;
+
 } 
 
 
@@ -133,3 +136,6 @@
     text-align: center;
   }
 }
+
+
+
