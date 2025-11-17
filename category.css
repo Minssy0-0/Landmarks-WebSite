@@ -27,10 +27,10 @@
   background-position: center;
   margin-bottom: 20px;
   position: relative;
-  padding: 80px 20px;
   color: #fff;
   text-align: center;
 }
+
 
 .category-container {
   position: relative;
@@ -40,7 +40,38 @@
 }
 
 
+@media (max-width: 1000px) {
+  .category-title {
+    font-size: 300rem;
+  }
 
+  .category-card-content {
+    text-align: center;
+  }
+}
+
+
+/*"Choose Your Destination" Title Styling*/
+.category-title {
+  font-size: 2rem;
+  color: #fff;
+  text-align: left;
+  font-weight: 700;
+  padding-bottom: 600px;
+  margin-right: -750px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+
+}
+
+
+/* Space between cards*/ /*The cards grid(position in the space)*/
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+  max-width: 1250px;
+  margin-left: 250px;
+} 
 
 
 /* Card text backdround*/
@@ -94,20 +125,11 @@
 
 @media (max-width: 1000px) {
   .category-title {
-    font-size: 300rem;
+    font-size: 3rem;
+    margin-left: 300px;
   }
 
-  .category-card-content {
+  .category-card figcaption {
     text-align: center;
   }
 }
-
-#Category {
-  background: url('https://images.pexels.com/photos/2422461/pexels-photo-2422461.jpeg?cs=srgb&dl=pexels-josh-hild-1270765-2422461.jpg&fm=jpg') 
-    no-repeat center center/cover;
-  padding: 80px 20px;
-  color: #fff;
-  text-align: center;
-  position: relative;
-}
-
