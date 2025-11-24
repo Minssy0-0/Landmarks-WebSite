@@ -13,7 +13,7 @@ nav{
  height: 75px;
  background: #ce4814;
  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
- z-index: 1000 ;
+ z-index: 1000;
 }
 nav .navbar{
  display: flex;
@@ -26,9 +26,8 @@ nav .navbar{
 }
 nav .navbar .logo a{
   color: #ffffff;
-  font-size: 100px;
-  font-weight: 600;
   text-decoration: none;
+  line-height: 20px;
 }
 nav .navbar .menu{
   display: flex;
