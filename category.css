@@ -19,13 +19,21 @@
 }
 */
 
+body
+{
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  background-color: #f7f4ef;
+}
+
 /*upgraded cool better master category styling😎😛*/
 #Category {
   background-image: url('https://images.pexels.com/photos/2422461/pexels-photo-2422461.jpeg?cs=srgb&dl=pexels-josh-hild-1270765-2422461.jpg&fm=jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   position: relative;
   color: #fff;
   text-align: center;

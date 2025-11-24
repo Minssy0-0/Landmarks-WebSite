@@ -1,3 +1,11 @@
+body
+{
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  background-color: #f7f4ef;
+}
+
 #Home {
   background: url('https://cdn.pixabay.com/photo/2023/09/21/14/17/italy-8266783_1280.jpg')
     no-repeat center center/cover;
@@ -85,10 +93,10 @@
 }
 
 .feature1 i {
-  font-size: 40px;
+font-size: 50px; /*icon size*/
   color: #ce4814;
   display: inline-block;
-  transform: translateY(-60px);
+  transform: translateY(-40px);
 }
 
 .feature1 h3 {
@@ -97,6 +105,7 @@
   margin-bottom: -50px;
   font-weight: 600;
 }
+
 
 .feature1 p {
   font-size: 0.9rem;
@@ -109,13 +118,13 @@
 /*Home accessory "Cuisine"*/
 .feature2 {
   text-align: center;
-  color: #cb93f9;
-  max-width: 1000px;
+  color: #333;
+  max-width: 600px;
 }
 
 .feature2 i {
-  font-size: 40px;
-  color: #cb0b0b;
+  font-size: 50px; /*icon size*/
+  color: #ce4814;
   display: inline-block;
   transform: translateY(-40px);
 }
