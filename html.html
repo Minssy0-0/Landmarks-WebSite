@@ -60,12 +60,50 @@
 </section>
 <br>
 
-<section id="Filler Sec">
+
 
 </section>
 
-  <section id="Category">
-  <h2 class="category-title">Wherever Your Heart Leads You</h2>
+  <!-- ===== CATEGORY (Carousel) ===== -->
+<section id="Category">
+  <h2 class="category-title">Choose Your Destination</h2>
+
+  <div class="carousel-wrapper category-container">
+    <button class="carousel-btn prev" aria-label="Previous" disabled>←</button>
+
+    <div class="carousel-viewport">
+      <div class="carousel-track">
+        <section class="category-grid">
+    <article class="category-card">
+      <figure>
+        <img src="https://i.natgeofe.com/k/a6c9f195-de20-445d-9d36-745ef56042c5/OG_Colosseum_Ancient-Rome_KIDS_1122_3x2.jpg" alt="Rome">
+        <figcaption>
+          <h3>Rome</h3>
+          <p>Explore the Eternal City — ancient ruins, art, and vibrant street life.</p>
+        </figcaption>
+      </figure>
+    </article>
+
+    <article class="category-card">
+      <figure>
+        <img src="https://images.visititaly.eu/uploads/articoli/evidenza/20220120190527venezia-cosa-vedere.jpg" alt="Venice">
+        <figcaption>
+          <h3>Venice</h3>
+          <p>Glide through canals and discover the romance of this floating city.</p>
+        </figcaption>
+      </figure>
+    </article>
+
+    <article class="category-card">
+      <figure>
+        <img src="https://www.brunelleschihotelflorence.com/wp-content/uploads/cinque-terre.jpeg" alt="Florence">
+        <figcaption>
+          <h3>Florence</h3>
+          <p>Dive into Renaissance art, culture, and breathtaking Tuscan views.</p>
+        </figcaption>
+      </figure>
+    </article>
+  </section>
 
   <section class="category-grid">
     <article class="category-card">
@@ -98,44 +136,14 @@
       </figure>
     </article>
   </section>
-</section>
-
-
-
-<section id="Category">
-    <div class="category-grid">
-      <article class="category-card">
-        <figure>
-          <img src="https://www.planetware.com/photos-large/I/italy-amalfi-coast.jpg" alt="Amalfi Coast">
-          <figcaption>
-            <h3>Amalfi Coast</h3>
-            <p>Experience stunning coastal views, charming villages, and Mediterranean cuisine.</p>
-          </figcaption>
-        </figure>
-      </article>
-
-      <article class="category-card">
-        <figure>
-          <img src="https://www.italymagazine.com/sites/default/files/styles/article_hero_image/public/field/image/shutterstock_1939271086.jpg?itok=G1j8KX1J" alt="Milan">
-          <figcaption>
-            <h3>Milan</h3>
-            <p>Discover Italy's fashion capital — shopping, art, and vibrant nightlife.</p>
-          </figcaption>
-        </figure>
-      </article>
-
-      <article class="category-card">
-        <figure>
-          <img src="https://www.tripsavvy.com/thmb/1Yk2b1Yk9gXG6Wc1X1Z4jv2b7eE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1209645547-5c9f3b6bc9e77c0001f3c2d6.jpg" alt="Sicily">
-          <figcaption>
-            <h3>Sicily</h3>
-            <p>Explore ancient ruins, vibrant markets, and stunning beaches on this Mediterranean island.</p>
-          </figcaption>
-        </figure>
-      </article>
+      </div>
     </div>
+
+    <button class="carousel-btn next" aria-label="Next">→</button>
   </div>
 </section>
+<!-- ===== End Category Carousel ===== -->
+
 
   <section id="About"></section> 
   <section id="Contact">
@@ -205,5 +213,104 @@
     <p>© 2025 GoTourItaly. All rights reserved.</p>
   </div>
 </footer>
+
+<script>
+  // carousel.js — robust version
+(function () {
+  document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector(".carousel-track");
+    const cards = Array.from(document.querySelectorAll(".carousel-card"));
+    const btnNext = document.querySelector(".carousel-btn.next");
+    const btnPrev = document.querySelector(".carousel-btn.prev");
+
+    if (!track || cards.length === 0) {
+      console.warn("Carousel: missing .carousel-track or .carousel-card elements.");
+      return;
+    }
+
+    let index = 0;
+
+    function visibleCount() {
+      const w = window.innerWidth;
+      if (w < 640) return 1;
+      if (w < 1024) return 2;
+      return 3;
+    }
+
+    function maxIndexForVisible() {
+      return Math.max(0, cards.length - visibleCount());
+    }
+
+    function updateButtons() {
+      if (btnPrev) btnPrev.disabled = index <= 0;
+      if (btnNext) btnNext.disabled = index >= maxIndexForVisible();
+    }
+
+    function updateTrack() {
+      if (!cards[0]) return;
+      const targetCard = cards[index];
+      const translateX = targetCard.offsetLeft - parseFloat(getComputedStyle(track).paddingLeft || 0);
+      track.style.transform = `translateX(-${translateX}px)`;
+      updateButtons();
+    }
+
+    function clampIndex() {
+      const max = maxIndexForVisible();
+      if (index < 0) index = 0;
+      if (index > max) index = max;
+    }
+
+    if (btnNext) {
+      btnNext.addEventListener("click", () => {
+        index++;
+        clampIndex();
+        updateTrack();
+      });
+    }
+    if (btnPrev) {
+      btnPrev.addEventListener("click", () => {
+        index--;
+        clampIndex();
+        updateTrack();
+      });
+    }
+
+    let resizeTimer = null;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        const max = maxIndexForVisible();
+        if (index > max) index = max;
+        updateTrack();
+      }, 120);
+    });
+
+    // basic swipe support
+    let touchStartX = 0, touchEndX = 0;
+    const minSwipePx = 40;
+    track.addEventListener("touchstart", (e) => { touchStartX = e.touches[0].clientX; }, {passive:true});
+    track.addEventListener("touchmove",  (e) => { touchEndX = e.touches[0].clientX; }, {passive:true});
+    track.addEventListener("touchend", () => {
+      const dx = touchStartX - touchEndX;
+      if (Math.abs(dx) > minSwipePx) {
+        if (dx > 0 && index < maxIndexForVisible()) index++;
+        else if (dx < 0 && index > 0) index--;
+        clampIndex();
+        updateTrack();
+      }
+      touchStartX = 0; touchEndX = 0;
+    });
+
+    track.style.transition = track.style.transition || "transform 0.45s cubic-bezier(.22,.9,.12,1)";
+    updateTrack();
+    updateButtons();
+
+    // debug helper (optional)
+    window.__carouselDebug = { track, cards, setIndex(i){ index = i; clampIndex(); updateTrack(); updateButtons(); }, getIndex(){ return index; } };
+  });
+})();
+
+</script>
+
 </body>
 </html>
