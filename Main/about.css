@@ -1,16 +1,75 @@
-body
-{
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-sizing: border-box;
-  background-color: #f7f4ef;
+#About {
+  background: url('https://cdn.pixabay.com/photo/2016/09/30/14/56/venetian-1705528_960_720.jpg')
+    no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: #d66f0e;
+  padding-top: 40px;
+  margin-bottom: 20px;
+  z-index: -1;
 }
 
-#About{
-background-image: url('https://cdn.pixabay.com/photo/2016/09/30/14/56/venetian-1705528_960_720.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
- background-position: center;
-  margin-bottom: 10px; 
- 
+#About::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(8, 8, 8, 0.35);
+  z-index: -1;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.about-section {
+  padding: 80px 20px;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+background-color: #0000005b;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #0000003b;
+  box-shadow: 32px 32px 60px #00000063,
+             -32px -32px 60px #0000005d;
+}
+
+.about-container h1 {
+  font-size: 36px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: #ffffff ;
+}
+
+.about-container p {
+  font-size: 18px;
+  margin-bottom: 0px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.about-container strong {
+  color: #ffffff; /* Italian green accent */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container h1 {
+    font-size: 28px;
+  }
+
+  .about-container p {
+    font-size: 16px;
+  }
+  
 }
