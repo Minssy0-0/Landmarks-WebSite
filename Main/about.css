@@ -1,6 +1,7 @@
 #About {
   background: url('https://cdn.pixabay.com/photo/2016/09/30/14/56/venetian-1705528_960_720.jpg')
     no-repeat center center/cover;
+  
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -53,14 +54,13 @@ background-color: #0000005b;
 
 .about-container p {
   font-size: 18px;
+  font-family: Copperplate, sans-serif;
+  font-weight: bold;
   margin-bottom: 0px;
   color: #ffffff;
   margin-top: 20px;
 }
 
-.about-container strong {
-  color: #ffffff; /* Italian green accent */
-}
 
 /* Responsive */
 @media (max-width: 768px) {
