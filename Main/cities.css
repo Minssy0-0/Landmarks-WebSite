@@ -1,23 +1,27 @@
 .cities-page {
-  background-image: url('https://images.pexels.com/photos/2422461/pexels-photo-2422461.jpeg?cs=srgb&dl=pexels-josh-hild-1270765-2422461.jpg&fm=jpg');
+  background-image: url('https://images.pexels.com/photos/2422461/pexels-photo-2422461.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 120px 8% 80px;
+  padding: 140px 8% 120px;
   position: relative;
   color: #fff;
+}
+
+.cities-page > * {
+  position: relative;
+  z-index: 1;
 }
 
 .cities-page::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: -1;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 0;
 }
+
+
 
 .cities-title {
   text-align: center;
@@ -27,11 +31,14 @@
 }
 
 .cities-grid {
+  display: grid;
+  margin-bottom: 80px;
+  grid-template-columns: repeat(3, 1fr); /* 👈 ALWAYS 3 per row */
+  gap: 30px;
   max-width: 1250px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  position: relative;
+  z-index: 2;
 }
 
 .city-card {
@@ -42,7 +49,6 @@
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   backdrop-filter: blur(6px);
   position: relative;
-  z-index: 1;
 }
 
 .city-card img {
@@ -50,6 +56,7 @@
   height: 280px;
   object-fit: cover;
   transition: transform 0.5s ease;
+  margin-bottom: 1.3rem;
 }
 
 .city-card:hover img {
@@ -76,5 +83,38 @@
   box-shadow: 0 30px 100px rgba(0, 0, 0, 0.3);
 }
 
+
+.city-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Button inside card */
+.city-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #ce4814;
+  color: #fff;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.city-card:hover .city-btn {
+  background: #e65c1b;
+}
+
+/* Cursor feedback */
+.city-card {
+  cursor: pointer;
+}
+
+.city-link:focus-visible {
+  outline: 3px solid #ce4814;
+  border-radius: 18px;
+}
 
 
