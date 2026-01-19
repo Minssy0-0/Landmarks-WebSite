@@ -1,12 +1,33 @@
 .cities-page {
-  background-image: url('https://images.pexels.com/photos/2422461/pexels-photo-2422461.jpeg');
-  background-repeat: no-repeat;
+  background-image: url('Pics/img1.png');
+  background-repeat: repeat;
   background-size: cover;
   background-position: center;
   padding: 140px 8% 120px;
   position: relative;
   color: #fff;
 }
+
+#cities-page {
+  background-image: url('Pics/img1.png');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 140px 8% 120px;
+  position: relative;
+  color: #fff;
+}
+
+#cities-page1 {
+  background-image: url('Pics/img1.png');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 140px 8% 120px;
+  position: relative;
+  color: #fff;
+}
+
 
 .cities-page > * {
   position: relative;
@@ -20,7 +41,6 @@
   background-color: rgba(0, 0, 0, 0.35);
   z-index: 0;
 }
-
 
 
 .cities-title {
