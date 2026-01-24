@@ -3,9 +3,10 @@
   background-repeat: repeat;
   background-size: cover;
   background-position: center;
-  padding: 140px 8% 120px;
+  padding: 95px 8% 10rem;
   position: relative;
   color: #fff;
+  padding-bottom: 94rem;
 }
 
 #cities-page {
@@ -16,6 +17,7 @@
   padding: 140px 8% 120px;
   position: relative;
   color: #fff;
+
 }
 
 #cities-page1 {
@@ -43,23 +45,63 @@
 }
 
 
+
+.island-cont {
+  position: sticky;
+    width: 23rem;
+    height: 39rem;
+   padding: 0.6rem;
+background-color: rgb(247, 193, 126);
+border: 0.3rem solid rgb(192, 113, 23);
+border-radius: 3rem;
+margin-top: 23.5rem;
+margin-left: -3.7rem;
+margin-right: 3rem;
+top: 1;
+z-index: 2;
+}
+
+.p-info {
+  padding-top: .3rem;
+  margin-left: 0.167rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #3b2a1a;
+  padding-right: 0.3rem;
+  overflow-y: auto;
+  flex-grow: 1;
+  scrollbar-width: thin;
+  scrollbar-color: #ce4814 transparent;
+}
+
+
 .cities-title {
   text-align: center;
   font-size: 2rem;
   color: #ce4814;
-  margin-bottom: 50px;
+  margin-bottom: .4rem;
 }
 
 .cities-grid {
   display: grid;
   margin-bottom: 80px;
-  grid-template-columns: repeat(3, 1fr); /* 👈 ALWAYS 3 per row */
+  grid-template-columns: repeat(3, 1fr); /* ALWAYS 3 per row */
   gap: 30px;
   max-width: 1250px;
-  margin: 0 auto;
   position: relative;
   z-index: 2;
 }
+
+
+.cities-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+
+  min-height: 100%;
+}
+
+
 
 .city-card {
   background: rgba(251, 251, 251, 0.39);
@@ -95,7 +137,7 @@
   color: #f0f0f0;
   font-size: 0.95rem;
   line-height: 1.5;
-  margin: 0 16px 20px;
+  margin: 0 16px 10px;
 }
 
 .city-card:hover {
@@ -113,7 +155,9 @@
 
 /* Button inside card */
 .city-btn {
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  margin: 0 auto 16px;
   padding: 10px 22px;
   background: #ce4814;
   color: #fff;
