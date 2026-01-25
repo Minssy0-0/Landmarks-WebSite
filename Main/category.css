@@ -59,7 +59,7 @@ body
 .category-title {
   font-size: 2rem;
   text-align: center;
-  padding-top: 30px;
+  padding: 1rem 0 0.5rem 0;
 }
 
 
@@ -116,14 +116,13 @@ align-items: center;
 
 /* More space inside the card-Text*/
 .category-card figcaption {
-  padding: 1.8rem;
+  padding: 1rem 1.8rem 1rem 1.8rem;
   text-align: left;
 }
 /* Card Text Styling-Card Tittle */
 .category-card h3 {
   color: #ffffff;
   font-size: 1.5rem;
-  margin-top: -3rem;
   font-weight: 600;
 }
 /* Card Text Styling-Card <p> */
@@ -134,7 +133,7 @@ align-items: center;
   margin: 0.3rem;
 }
 
-.city-btn {
+.city-button {
   display: inline-block;
   padding: 10px 22px;
   background: #ce4814;
@@ -162,7 +161,7 @@ align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -20px;   /* space ABOVE button */
+  margin-top: 10px;   /* space ABOVE button */
   margin-bottom: 20px; /* space BELOW button */
   text-decoration: none !important;
 

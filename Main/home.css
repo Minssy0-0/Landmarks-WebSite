@@ -78,7 +78,8 @@ body
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
   gap: 60px;
   flex-wrap: wrap;
   border-top-left-radius: 10px;
@@ -96,7 +97,7 @@ body
 font-size: 50px; /*icon size*/
   color: #ce4814;
   display: inline-block;
-  transform: translateY(-40px);
+  transform: translateY(-30px);
 }
 
 .feature1 h3 {
@@ -110,7 +111,7 @@ font-size: 50px; /*icon size*/
 .feature1 p {
   font-size: 0.9rem;
   color: #555;
-  line-height: 0.3;
+  line-height: 1;
 }
 
 
@@ -126,7 +127,7 @@ font-size: 50px; /*icon size*/
   font-size: 50px; /*icon size*/
   color: #ce4814;
   display: inline-block;
-  transform: translateY(-40px);
+  transform: translateY(-30px);
 }
 
 .feature2 h3 {
@@ -139,7 +140,7 @@ font-size: 50px; /*icon size*/
 .feature2 p {
   font-size: 0.9rem;
   color: #555;
-  line-height: 0.3;
+  line-height: 1;
 }
 
 
@@ -155,7 +156,7 @@ font-size: 50px; /*icon size*/
   font-size: 60px;
   color: #ce4814;
   display: inline-block;
-  transform: translateY(-40px);
+  transform: translateY(-30px);
 }
 
 .feature3 h3 {
@@ -168,7 +169,8 @@ font-size: 50px; /*icon size*/
 .feature3 p {
   font-size: 0.9rem;
   color: #555;
-  line-height: 0.3;
+  line-height: 1;
+  padding-bottom: 0.8rem;
 }
 
 
