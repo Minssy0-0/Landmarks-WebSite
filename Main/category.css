@@ -174,6 +174,23 @@ align-items: center;
 
 
 
+@media (max-width: 1200px) {
+  .category-grid {
+    max-width: 100%;
+    max-height: none;
+    gap: 25px;
+    padding: 0 20px;
+  }
+  
+  .category-card {
+    min-height: auto;
+  }
+  
+  .category-card img {
+    height: 250px;
+  }
+}
+
 @media (max-width: 1000px) {
   .category-title {
     font-size: 3rem;
@@ -182,6 +199,126 @@ align-items: center;
 
   .category-card figcaption {
     text-align: center;
+  }
+  
+  .category-grid {
+    gap: 20px;
+    padding: 0 15px;
+  }
+  
+  .category-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .category-card p {
+    font-size: 0.9rem;
+  }
+  
+  .view-all-btn {
+    width: 50%;
+    left: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-title {
+    font-size: 2rem;
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .category-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 0 10px;
+    max-height: none;
+  }
+  
+  .category-card {
+    border-radius: 12px;
+  }
+  
+  .category-card img {
+    height: 200px;
+  }
+  
+  .category-card figcaption {
+    padding: 0.8rem 1rem;
+  }
+  
+  .category-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .category-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .city-button {
+    padding: 8px 18px;
+    font-size: 0.8rem;
+  }
+  
+  .view-all-btn {
+    width: 70%;
+    left: 15%;
+    padding: 12px 24px;
+    font-size: 1rem;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-title {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 8px;
+  }
+  
+  .category-card {
+    border-radius: 10px;
+  }
+  
+  .category-card img {
+    height: 180px;
+  }
+  
+  .category-card figcaption {
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .category-card h3 {
+    font-size: 0.95rem;
+    margin: 0.5rem;
+  }
+  
+  .category-card p {
+    font-size: 0.75rem;
+    margin: 0.2rem;
+  }
+  
+  .city-button {
+    padding: 6px 14px;
+    font-size: 0.7rem;
+  }
+  
+  .view-all-btn {
+    width: 80%;
+    left: 10%;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .view-all-btn:hover {
+    transform: translateY(-2px);
   }
 }
 

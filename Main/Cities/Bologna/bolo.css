@@ -136,3 +136,280 @@ footer {
   background: var(--accent);
   color: white;
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    height: 70vh;
+    margin-top: 60px;
+  }
+  
+  .hero h1 {
+    font-size: 60px;
+  }
+  
+  .container {
+    max-width: 85%;
+    padding: 40px 15px;
+  }
+  
+  .info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+  
+  .stats {
+    gap: 15px;
+  }
+  
+  .stats div {
+    padding: 15px;
+  }
+  
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 15px;
+  }
+  
+  .gallery img {
+    height: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    height: 60px;
+  }
+  
+  .navbar {
+    max-width: 95%;
+  }
+  
+  .navbar .logo a img {
+    width: 60px;
+  }
+  
+  .menu li {
+    margin-left: 12px;
+  }
+  
+  .menu a {
+    font-size: 13px;
+  }
+  
+  .hero {
+    height: 60vh;
+    margin-top: 60px;
+  }
+  
+  .hero-content {
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    letter-spacing: 1.5px;
+  }
+  
+  .hero-content p {
+    font-size: 16px;
+  }
+  
+  .container {
+    max-width: 90%;
+    padding: 30px 15px;
+  }
+  
+  .info {
+    padding: 20px;
+  }
+  
+  .info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .info p {
+    font-size: 15px;
+  }
+  
+  .stats {
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .stats div {
+    background: white;
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+  
+  .stats div span {
+    font-size: 0.8rem;
+  }
+  
+  .stats div strong {
+    font-size: 1.1rem;
+  }
+  
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    max-width: 100%;
+    padding: 10px;
+  }
+  
+  .gallery img {
+    height: 120px;
+  }
+  
+  .links {
+    padding: 20px;
+  }
+  
+  .links .container {
+    max-width: 100%;
+    padding: 15px;
+  }
+  
+  .links h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  
+  .links ul li {
+    margin-bottom: 8px;
+  }
+  
+  .links a {
+    font-size: 14px;
+  }
+  
+  footer {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    height: 55px;
+  }
+  
+  .navbar {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  .navbar .logo a img {
+    width: 50px;
+  }
+  
+  .menu {
+    flex-direction: column;
+  }
+  
+  .menu li {
+    margin-left: 0;
+    padding: 8px 0;
+  }
+  
+  .menu a {
+    font-size: 12px;
+  }
+  
+  .hero {
+    height: 50vh;
+    margin-top: 55px;
+  }
+  
+  .hero-content {
+    padding: 15px;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
+  .hero-content p {
+    font-size: 14px;
+  }
+  
+  .container {
+    max-width: 100%;
+    padding: 20px 10px;
+  }
+  
+  .info {
+    padding: 15px;
+  }
+  
+  .info h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  .info p {
+    font-size: 13px;
+  }
+  
+  .stats {
+    gap: 8px;
+    margin-top: 15px;
+    flex-direction: column;
+  }
+  
+  .stats div {
+    padding: 10px;
+  }
+  
+  .stats div span {
+    font-size: 0.75rem;
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .stats div strong {
+    font-size: 1rem;
+    display: block;
+  }
+  
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 8px;
+  }
+  
+  .gallery img {
+    height: 100px;
+  }
+  
+  .links {
+    padding: 15px;
+  }
+  
+  .links .container {
+    padding: 10px;
+  }
+  
+  .links h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .links ul li {
+    margin-bottom: 6px;
+  }
+  
+  .links a {
+    font-size: 12px;
+  }
+  
+  footer {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+}

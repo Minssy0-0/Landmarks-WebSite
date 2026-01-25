@@ -269,17 +269,173 @@ footer {
   color: #f2f2f2;
 }
 
-/* Responsive footer layout */
+/* Responsive navbar */
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
+  nav {
+    height: 60px;
   }
-
-  .footer-social .social-icons {
-    justify-content: center;
+  
+  nav .navbar {
+    max-width: 95%;
+  }
+  
+  nav .navbar .logo a img {
+    width: 65px;
+  }
+  
+  .navbar .menu {
+    flex-wrap: wrap;
+  }
+  
+  .navbar .menu li {
+    margin: 0 10px;
+  }
+  
+  .navbar .menu li a {
+    font-size: 14px;
   }
 }
+
+@media (max-width: 480px) {
+  nav {
+    height: 55px;
+  }
+  
+  nav .navbar {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  nav .navbar .logo a img {
+    width: 55px;
+  }
+  
+  .navbar .menu {
+    gap: 0;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    background: #ce4814;
+    display: none;
+  }
+  
+  .navbar .menu.active {
+    display: flex;
+  }
+  
+  .navbar .menu li {
+    margin: 10px 0;
+    padding: 0 15px;
+  }
+  
+  .navbar .menu li a {
+    font-size: 13px;
+  }
+}
+
+/* Contact section responsive */
+@media (max-width: 768px) {
+  #Contact {
+    height: auto;
+    min-height: 80vh;
+    padding: 20px;
+  }
+  
+  .feedback-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+  }
+  
+  .feedback-container h2 {
+    font-size: 1.5rem;
+  }
+  
+  .feedback-container p {
+    font-size: 0.9rem;
+  }
+  
+  .feedback-form label {
+    font-size: 0.9rem;
+  }
+  
+  .feedback-form input,
+  .feedback-form textarea {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+  
+  .feedback-btn {
+    font-size: 1.2rem;
+    padding: 8px 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #Contact {
+    height: auto;
+    min-height: 70vh;
+  }
+  
+  .feedback-container {
+    width: 100%;
+    padding: 15px;
+    margin: 0 10px;
+  }
+  
+  .feedback-container h2 {
+    font-size: 1.2rem;
+  }
+  
+  .feedback-container p {
+    font-size: 0.8rem;
+  }
+  
+  .feedback-form .input-group1,
+  .feedback-form .input-group2,
+  .feedback-form .input-group {
+    margin-bottom: 12px;
+  }
+  
+  .feedback-form label {
+    font-size: 0.85rem;
+  }
+  
+  .feedback-form input,
+  .feedback-form textarea {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+  
+  .feedback-form textarea {
+    height: 80px;
+  }
+  
+  .feedback-btn {
+    font-size: 1rem;
+    padding: 6px 16px;
+  }
+}
+
+/* Feedback section responsive */
+@media (max-width: 768px) {
+  #Feedback {
+    min-height: 35vh;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #Feedback {
+    min-height: 30vh;
+    padding: 15px;
+  }
+}
+
+/* Footer responsive */
 .button a{
   position: fixed;
   bottom: 20px;
@@ -290,4 +446,72 @@ footer {
   font-size: 18px;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-social .social-icons {
+    justify-content: center;
+  }
+  
+  .footer-about,
+  .footer-links,
+  .footer-social {
+    flex: 1 1 100%;
+  }
+  
+  .footer-container h3,
+  .footer-container h4 {
+    font-size: 1.1rem;
+  }
+  
+  .footer-about p,
+  .footer-links a {
+    font-size: 0.9rem;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    gap: 20px;
+  }
+  
+  .footer-container h3,
+  .footer-container h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-about p,
+  .footer-links a {
+    font-size: 0.8rem;
+  }
+  
+  .footer-links li {
+    margin-bottom: 6px;
+  }
+  
+  .footer-social .social-icons a {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.75rem;
+  }
+  
+  .button a {
+    padding: 5px 10px;
+    font-size: 16px;
+    bottom: 15px;
+    right: 15px;
+  }
 }

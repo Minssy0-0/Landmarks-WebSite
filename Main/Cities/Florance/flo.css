@@ -135,3 +135,128 @@ footer {
   background: var(--accent);
   color: white;
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    height: 70vh;
+    margin-top: 60px;
+  }
+  
+  .hero h1 {
+    font-size: 60px;
+  }
+  
+  .container {
+    max-width: 85%;
+    padding: 40px 15px;
+  }
+  
+  .info h2 {
+    font-size: 1.8rem;
+  }
+  
+  .stats {
+    gap: 15px;
+  }
+  
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  
+  .gallery img {
+    height: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    height: 60px;
+  }
+  
+  .navbar {
+    max-width: 95%;
+  }
+  
+  .hero {
+    height: 60vh;
+    margin-top: 60px;
+  }
+  
+  .hero-content {
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+  }
+  
+  .container {
+    max-width: 90%;
+    padding: 30px 15px;
+  }
+  
+  .info h2 {
+    font-size: 1.5rem;
+  }
+  
+  .stats {
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    padding: 10px;
+  }
+  
+  .gallery img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    height: 55px;
+  }
+  
+  .navbar {
+    padding: 0 10px;
+  }
+  
+  .hero {
+    height: 50vh;
+    margin-top: 55px;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+  }
+  
+  .container {
+    max-width: 100%;
+    padding: 20px 10px;
+  }
+  
+  .info h2 {
+    font-size: 1.2rem;
+  }
+  
+  .stats {
+    gap: 8px;
+    margin-top: 15px;
+    flex-direction: column;
+  }
+  
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 8px;
+  }
+  
+  .gallery img {
+    height: 100px;
+  }
+}
