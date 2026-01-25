@@ -135,3 +135,102 @@ footer {
   background: var(--accent);
   color: white;
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    height: 70vh;
+    margin-top: 60px;
+  }
+  
+  .hero h1 {
+    font-size: 60px;
+  }
+  
+  .container {
+    max-width: 85%;
+    padding: 40px 15px;
+  }
+  
+  .stats {
+    gap: 15px;
+  }
+  
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  
+  .gallery img {
+    height: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    height: 60px;
+  }
+  
+  .hero {
+    height: 60vh;
+    margin-top: 60px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+  }
+  
+  .container {
+    max-width: 90%;
+    padding: 30px 15px;
+  }
+  
+  .stats {
+    gap: 10px;
+  }
+  
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    padding: 10px;
+  }
+  
+  .gallery img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    height: 55px;
+  }
+  
+  .hero {
+    height: 50vh;
+    margin-top: 55px;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+  }
+  
+  .container {
+    max-width: 100%;
+    padding: 20px 10px;
+  }
+  
+  .stats {
+    gap: 8px;
+    flex-direction: column;
+  }
+  
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 8px;
+  }
+  
+  .gallery img {
+    height: 100px;
+  }
+}
